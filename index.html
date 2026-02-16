@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Gallery | CodeAlpha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Image Gallery</h1>
+
+    <!-- Filter Buttons -->
+    <div class="filters">
+        <button class="active" onclick="filterImages('all')">All</button>
+        <button onclick="filterImages('nature')">Nature</button>
+        <button onclick="filterImages('animals')">Animals</button>
+        <button onclick="filterImages('city')">City</button>
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery">
+        <img src="https://picsum.photos/id/1015/400/300" data-category="nature" onclick="openImage(0)">
+        <img src="https://picsum.photos/id/1025/400/300" data-category="animals" onclick="openImage(1)">
+        <img src="https://picsum.photos/id/1035/400/300" data-category="city" onclick="openImage(2)">
+        <img src="https://picsum.photos/id/1045/400/300" data-category="nature" onclick="openImage(3)">
+        <img src="https://picsum.photos/id/1062/400/300" data-category="animals" onclick="openImage(4)">
+        <img src="https://picsum.photos/id/1011/400/300" data-category="city" onclick="openImage(5)">
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <span class="close" onclick="closeImage()">✖</span>
+        <button class="nav left" onclick="prevImage()">❮</button>
+        <img id="modalImg">
+        <button class="nav right" onclick="nextImage()">❯</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
